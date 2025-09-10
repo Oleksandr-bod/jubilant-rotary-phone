@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра на слова (A1)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Вивчай слова (A1)</h1>
+
+    <!-- Вибір кількості слів -->
+    <div class="controls">
+      <label for="wordCount">Кількість слів:</label>
+      <select id="wordCount">
+        <option value="10">10</option>
+        <option value="50">50</option>
+        <option value="100" selected>100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+        <option value="600">600</option>
+        <option value="700">700</option>
+        <option value="800">800</option>
+      </select>
+      <button onclick="resetGame()" class="start">▶ Почати гру</button>
+    </div>
+
+    <!-- Панель статистики -->
+    <div class="stats">
+      <p>Прогрес: <span id="progress">0 / 100</span></p>
+      <p>Правильно: <span id="correct">0</span></p>
+      <p>Неправильно: <span id="incorrect">0</span></p>
+    </div>
+
+    <!-- Перемикач -->
+    <label class="toggle">
+      <input type="checkbox" id="toggleWord" checked>
+      Показувати англійське слово
+    </label>
+
+    <!-- Основна гра -->
+    <div class="game-box">
+      <h2 id="word">Word</h2>
+      <div class="options" id="options"></div>
+      <button id="playWord" class="listen">🔊 Прослухати</button>
+    </div>
+
+    <!-- Кнопка рестарту -->
+    <button onclick="resetGame()" class="reset">🔄 Грати знову</button>
+  </div>
+
+  <script src="./js/words_full_A1.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
